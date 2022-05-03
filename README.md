@@ -7,10 +7,6 @@
 >
 > Maintainer - [Kevin Naughton Jr.](https://github.com/kdn251)
 
-## Translations
-
-- [简体中文](./README-zh-cn.md)
-
 ## Table of Contents
 - [YouTube](#youtube)
 - [Instagram](#instagram)
@@ -118,6 +114,7 @@
   array where the keys are usually Strings. No node in the tree stores the key associated with that node; instead, its position 
   in the tree defines the key with which it is associated. All the descendants of a node have a common prefix of the String associated 
   with that node, and the root is associated with the empty String.
+  Video explanation for trie insertation and searching is available [here](https://www.youtube.com/watch?v=dUBkaqrcYT8).
 
 ![Alt text](/images/trie.png?raw=true "Trie")
 
