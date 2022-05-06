@@ -9,7 +9,7 @@ sort(v[0].begin(), v[0].end());
 ```
 sort(v[0].rbegin(), v[0].rend());
 ```
-#### Increasing order sort by Col
+#### Increasing order sort by 2nd Col 
 ```
     static bool sortcol(const vector<int>& v1, const vector<int>& v2){
         return v1[1] < v2[1];
@@ -20,12 +20,28 @@ sort(v[0].rbegin(), v[0].rend());
 
 
 
+# Priority queue
+
+#### Default priority queue
+Default STL priority queue is for max heap implementation
+
+```
+priority_queue<int> p;
+```
+
+#### Priority queue for min heap
+```
+priority_queue<int, vector<int>, greater<int> > p;
+```
+
+
+
 
 # Iterating an array
 
 #### Increasing order
 ```
-  for(unsinged int i=0; i<arr.size(); ++i){
+  for(unsigned int i=0; i<arr.size(); ++i){
   ...
   }
 ```
