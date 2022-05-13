@@ -76,3 +76,13 @@ or
    }
 ```
 
+# Map access
+#### To access at the begin of a map
+```
+map<int, int> m;
+auto it = m.begin();
+```
+To access at an Index `r` of a map
+```
+advance(it, r);
+```
