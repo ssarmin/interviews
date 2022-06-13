@@ -1,6 +1,16 @@
 # Sorting a 2D vector
 for a `vector<vector<int>> v`
 
+#### Custom sorting
+You need add your custom fuction, like this one
+```
+    static bool my_option(string s1, string s2){
+        return s1+s2 > s2+s1;
+    }
+```
+And, call the sorting fuction like this
+```sort(strs.begin(), strs.end(), my_option);```
+
 #### Increasing order for 1st row
 ```
 sort(v[0].begin(), v[0].end());
