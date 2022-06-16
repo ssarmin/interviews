@@ -28,25 +28,6 @@ sort(v[0].rbegin(), v[0].rend());
 ```
 #### Decreasing order sort by Col
 
-
-
-# Priority queue
-
-#### Default priority queue
-Default STL priority queue is for max heap implementation
-
-```
-priority_queue<int> p;
-```
-
-#### Priority queue for min heap
-```
-priority_queue<int, vector<int>, greater<int> > p;
-```
-
-
-
-
 # Iterating an array
 
 #### Increasing order
@@ -85,6 +66,35 @@ or
    ...
    }
 ```
+
+# Priority Queue
+
+#### Default priority queue
+Default STL priority queue is for max heap implementation
+
+```
+priority_queue<int> p;
+```
+The value having a greater element is the topmost element.
+ 
+ 
+#### Priority queue for min heap
+```
+priority_queue<int, vector<int>, greater<int> > p;
+```
+For this priority queue, the value having a smaller element is the topmost element.
+
+
+#### Priority queue of sets
+
+```priority_queue<set<data_type>> pq;```
+This stores set as an element in the max-heap priority queue. 
+The set having a greater first element is the topmost element. If the first element is equal then the second value of sets is compared and so on.
+
+To set priority_queue to work as a min-heap:
+```priority_queue<set<data_type>, vector<set<data_type>>, greater<set<data_type>>> pq;```
+
+
 
 # Map access
 #### To access at the begin of a map
