@@ -106,3 +106,10 @@ To access at an Index `r` of a map
 ```
 advance(it, r);
 ```
+
+# BFS - DFS
+For BFS, make sure marking position visited before entering the queue, that would ensure that we are not enqueuing same position multiple times.
+We will traverse one position only once!
+
+For DFS, make sure marking position visited before entering the stack, that would ensure that we are not pushing same position multiple times.
+We will traverse one position only once!
