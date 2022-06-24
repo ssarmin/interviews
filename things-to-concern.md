@@ -1,16 +1,6 @@
 # Sorting a 2D vector
 for a `vector<vector<int>> v`
 
-#### Custom sorting
-You need add your custom fuction, like this one
-```
-    static bool my_option(string s1, string s2){
-        return s1+s2 > s2+s1;
-    }
-```
-And, call the sorting fuction like this
-```sort(strs.begin(), strs.end(), my_option);```
-
 #### Increasing order for 1st row
 ```
 sort(v[0].begin(), v[0].end());
@@ -27,6 +17,16 @@ sort(v[0].rbegin(), v[0].rend());
     sort(v.begin(), v.end(), sortcol);
 ```
 #### Decreasing order sort by Col
+
+#### Custom sorting
+You need add your custom fuction, like this one
+```
+    static bool my_option(string s1, string s2){
+        return s1+s2 > s2+s1;
+    }
+```
+And, call the sorting fuction like this
+```sort(strs.begin(), strs.end(), my_option);```
 
 # Iterating an array
 
@@ -113,3 +113,28 @@ We will traverse one position only once!
 
 For DFS, make sure marking position visited before entering the stack, that would ensure that we are not pushing same position multiple times.
 We will traverse one position only once!
+
+
+# String split by space
+
+We have a ```string str``` which contains word and spaces. We want to get the words from the string.
+
+```
+    istringstream ss(str);
+    string word;
+    
+    while (ss >> word){
+        // use the word
+    }
+```
+
+If we have a ```string str = "adsf+qwer+poui+fdgh";``. We want to get the words from the string which are sperated by ```+```.
+```
+        stringstream ss (s);
+        string word;
+        char delim = '+';
+        
+        while (getline (ss, word, delim)) {
+            // use the word
+        }
+```
