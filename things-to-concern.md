@@ -18,7 +18,26 @@ sort(v[0].rbegin(), v[0].rend());
 ```
 #### Decreasing order sort by Col
 
+# String sorting
+
 #### Custom sorting
+
+If we have strings, ```vector<string> str = {"1", "99", "888", "5", "9"};``` We want to get the string sorted accodring to the numeric value of the string, like this ```"1", "5", "9", "99", "888"```;
+
+If we use normal sorting for this ```sort(str.begin(), str.end());```. we will get this output ```"1", "5", "888", "9", "99" ```
+
+To get our targeted outcome, we need to have a custom comparision function in the sorting: ```sort(str.begin(), str.end(), my_func);```
+
+```
+    static bool my_func(string s1, string s2){
+        if(s1.size() == s2.size())
+            return s1 < s2;
+        return s1.size() < s2.size();
+    }
+```
+
+Another custom function:
+
 You need add your custom fuction, like this one
 ```
     static bool my_option(string s1, string s2){
