@@ -162,3 +162,5 @@ If we have a ```string str = "adsf+qwer+poui+fdgh";``. We want to get the words 
 for Java, log10(n) / log10(3) could be 5.0000001 or 4.9999999. This effect can be observed by using the function log() instead of log10().
 for C++, use log2()
 
+# Hashing
+If you are using key/hash based containers, your key size should be small to avoid TLE.
