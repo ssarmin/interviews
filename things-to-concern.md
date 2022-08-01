@@ -126,6 +126,13 @@ To access at an Index `r` of a map
 advance(it, r);
 ```
 
+To check whether a key is present or not:
+```
+map_name.count(key k)
+```
+```count()``` returns 1 if the element with key K is present in the map container, otherwise 0.
+
+
 # BFS - DFS
 For BFS, make sure marking position visited before entering the queue, that would ensure that we are not enqueuing same position multiple times.
 We will traverse one position only once!
