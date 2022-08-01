@@ -171,3 +171,6 @@ for C++, use log2()
 
 # Hashing
 If you are using key/hash based containers, your key size should be small to avoid TLE.
+
+# Trie
+The complexity of creating a trie is ```O(W*L)```, where ```W``` is the number of words, and ```L``` is an average length of the word. You need to perform ```L``` lookups on the average for each of the ```W``` words in the set.
