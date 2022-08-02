@@ -156,7 +156,7 @@ We have a ```string str``` which contains word and spaces. We want to get the wo
 
 If we have a ```string str = "adsf+qwer+poui+fdgh";``. We want to get the words from the string which are sperated by ```+```.
 ```
-        stringstream ss (s);
+        istringstream ss (s);
         string word;
         char delim = '+';
         
