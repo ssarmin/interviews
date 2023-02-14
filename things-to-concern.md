@@ -140,6 +140,16 @@ We will traverse one position only once!
 For DFS, make sure marking position visited before entering the stack, that would ensure that we are not pushing same position multiple times.
 We will traverse one position only once!
 
+# Create new String with repeated character
+
+If I want to create a ```string str = "aaaaa"``` where the character ```a``` is a variable, ```ch```
+we can create it this way
+
+```
+   char ch = 'a';
+   int num = 5;
+   string str(num, ch);
+```
 
 # String split by space
 
@@ -174,3 +184,13 @@ If you are using key/hash based containers, your key size should be small to avo
 
 # Trie
 The complexity of creating a trie is ```O(W*L)```, where ```W``` is the number of words, and ```L``` is an average length of the word. You need to perform ```L``` lookups on the average for each of the ```W``` words in the set.
+
+# Stack
+We can modify any value in the top element of stack without popping and repushing. Like this
+```
+stack<pair<int, char>> s;
+s.push({11, 'f'});
+cout << s.top().first << endl; // this will output 11
+s.top().first = 15;
+cout << s.top().first << endl; // Now, this will output 15
+```
