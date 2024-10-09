@@ -18,6 +18,28 @@ sort(v[0].rbegin(), v[0].rend());
 ```
 #### Decreasing order sort by Col
 
+#### Vector with object sort
+```
+/**
+ * Definition of Interval:
+ * class Interval {
+ * public:
+ *     int start, end;
+ *     Interval(int start, int end) {
+ *         this->start = start;
+ *         this->end = end;
+ *     }
+ * }
+ */
+
+// Comparator function to sort intervals by their start value
+static bool compareIntervals(const Interval& i1, const Interval& i2) {
+    return i1.start < i2.start;
+}
+vector<Interval> intervals;
+sort(intervals.begin(), intervals.end(), compareIntervals);
+
+```
 # String sorting
 
 #### Custom sorting
