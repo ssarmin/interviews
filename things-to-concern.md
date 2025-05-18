@@ -69,6 +69,22 @@ You need add your custom fuction, like this one
 And, call the sorting fuction like this
 ```sort(strs.begin(), strs.end(), my_option);```
 
+# Reversing an array
+#### Reversing the whole array
+```
+reverse(arr.begin(), arr.end());
+```
+
+#### Reversing first `n` elements
+```
+reverse(arr.begin(), arr.begin()+n);
+```
+
+#### Reversing the rest of the elements (whole array - first `n` elements)
+```
+reverse(arr.begin()+n, arr.end());
+```
+
 # Iterating an array
 
 #### Increasing order
