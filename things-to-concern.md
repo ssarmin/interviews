@@ -189,6 +189,12 @@ we can create it this way
    string str(num, ch);
 ```
 
+# Remove the last character from a string
+```
+if(!str.empty()){
+    str.pop_back();
+}
+```
 # String split by space
 
 We have a ```string str``` which contains word and spaces. We want to get the words from the string.
