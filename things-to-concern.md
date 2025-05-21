@@ -195,6 +195,28 @@ if(!str.empty()){
     str.pop_back();
 }
 ```
+# String concatenation
+If we have a ```string word``` which we want to append to ```string result```.
+
+Non-efficient approach
+```
+result = result + word + " ";
+```
+In this approach, ```result``` grows with each concatenation, so repeated string concatenation like this costs ```O(1 + 2 + 3 + ... + n) = O(n²)``` in the worst case (due to repeated reallocation and copying).
+Time complexity: ```O(n²)```
+
+Efficient approach
+```
+ostringstream result;         // Efficient string builder
+result << word << " ";              // Append to result with space
+
+string res = result.str();              // Convert stream to string
+```
+
+In this approach, ```ostringstream``` accumulates characters efficiently without frequent memory reallocations.
+
+All operations (reverse, splitting, appending) are linear in total characters.
+
 # String split by space
 
 We have a ```string str``` which contains word and spaces. We want to get the words from the string.
