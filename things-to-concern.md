@@ -241,6 +241,9 @@ If we have a ```string str = "adsf+qwer+poui+fdgh";``. We want to get the words 
         }
 ```
 
+# unordered_set
+an unordered associative container that stores unique elements. Unlike set, it stores its elements using hashing. This provides average constant-time ```O(1) search, insert, and delete operations``` but the elements are not sorted in any particular order.
+
 # log
 for Java, log10(n) / log10(3) could be 5.0000001 or 4.9999999. This effect can be observed by using the function log() instead of log10().
 for C++, use log2()
