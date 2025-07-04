@@ -124,6 +124,19 @@ or
    }
 ```
 
+## Adding value and vector to 2D vector without creating new 1D vector
+
+Here's a 2D `vector<vector<int>> res`
+
+
+`res.emplace_back();` directly construct a vector inside `res`
+
+
+`res.back()` to access it
+
+
+`res.back().push_back(val);`
+
 # Priority Queue
 
 #### Default priority queue
