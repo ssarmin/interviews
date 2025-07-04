@@ -147,7 +147,12 @@ priority_queue<int> p;
 ```
 The value having a greater element is the topmost element.
  
- 
+#### Creating a priority queue from a vector
+If the given vector is `v`
+
+
+```priority_queue<int> p(v.begin(), v.end());```
+
 #### Priority queue for min heap
 ```
 priority_queue<int, vector<int>, greater<int> > p;
