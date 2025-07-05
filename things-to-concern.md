@@ -169,8 +169,27 @@ The set having a greater first element is the topmost element. If the first elem
 To set priority_queue to work as a min-heap:
 ```priority_queue<set<data_type>, vector<set<data_type>>, greater<set<data_type>>> pq;```
 
+#### Priority queue custom comparator
+```priority_queue<pair<int, int>, vector<pair<int, int>>, Compare> pq;```
+
+This stores pair as an element in the min-heap priority queue. We want to get the pair that provides the smallest summation. 
 
 
+The custom comparator:
+```
+class Compare {
+    public:
+        bool operator()(pair<int, int> p1, pair<int, int> p2){
+            // When true is returned, it means the order is NOT correct and swapping of elements takes place.
+            if (p1.first + p1.second > p2.first + p2.second) {
+                return true;
+            }
+            
+            // When false is returned, it means the order is correct and NO swapping of elements takes place.
+            return false;
+        }
+};
+```
 # Map access
 #### To access at the begin of a map
 ```
