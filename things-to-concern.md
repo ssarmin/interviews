@@ -191,7 +191,7 @@ class Compare {
 };
 ```
 # Map access
-#### To access at the begin of a map
+### To access at the begin of a map
 ```
 map<int, int> m;
 auto it = m.begin();
@@ -207,6 +207,71 @@ map_name.count(key k)
 ```
 ```count()``` returns 1 if the element with key K is present in the map container, otherwise 0.
 
+### map lower_bound
+
+find the first element in the map whose key is either equal to or greater than the given key. If the key passed in the parameter exceeds the maximum key in the container, then the iterator returned points to the number of elements in the map container as key and nothing for the element.
+
+```
+    map<int, char> m = {{10, 'A'}, {20, 'B'},
+                        {30, 'C'}};
+    int k = 20;
+
+  	// Find the lower bound
+    auto it = m.lower_bound(k);
+  	cout << it->first << " " << it->second << endl;
+  
+  	it = m.lower_bound(30);
+  	cout << it->first << " " << it->second << endl;
+  
+  	it = m.lower_bound(35);
+  	cout << it->first << " " << it->second << endl;
+```
+
+output of this code would be
+
+```
+20 B
+30 C
+3 
+```
+
+### map upper_bound
+
+find immediate next element just greater than k. If the key passed in the parameter exceeds the maximum key in the container, then the iterator returned points to the number of elements in the map container as key and element=0.
+
+```
+    map<int, int> mp;
+
+    // insert elements in random order
+    mp.insert({ 12, 30 });
+    mp.insert({ 11, 10 });
+    mp.insert({ 15, 50 });
+    mp.insert({ 14, 40 });
+
+    // when 11 is present
+    auto it = mp.upper_bound(11);
+    cout << "The upper bound of key 11 is ";
+    cout << (*it).first << " " << (*it).second << endl;
+
+    // when 13 is not present
+    it = mp.upper_bound(13);
+    cout << "The upper bound of key 13 is ";
+    cout << (*it).first << " " << (*it).second << endl;
+
+    // when 17 is exceeds the maximum key, so size
+        // of mp is returned as key and value as 0.
+    it = mp.upper_bound(17);
+    cout << "The upper bound of key 17 is ";
+    cout << (*it).first << " " << (*it).second;
+}
+```
+
+output of this code would be
+```
+The upper bound of key 11 is 12 30
+The upper bound of key 13 is 14 40
+The upper bound of key 17 is 4 0
+```
 
 # BFS - DFS
 For BFS, make sure marking position visited before entering the queue, that would ensure that we are not enqueuing same position multiple times.
