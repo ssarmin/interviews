@@ -290,7 +290,11 @@ we can create it this way
    int num = 5;
    string str(num, ch);
 ```
-
+# Append a character at the end a string
+```
+char ch = 'a';
+str.push_back(ch);
+```
 # Remove the last character from a string
 ```
 if(!str.empty()){
