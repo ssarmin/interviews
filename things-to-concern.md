@@ -207,6 +207,29 @@ map_name.count(key k)
 ```
 ```count()``` returns 1 if the element with key K is present in the map container, otherwise 0.
 
+### map lower_bound and upper_bound
+
+| Function       | What it does                                                |
+| -------------- |:-----------------------------------------------------------:|
+| lower_bound(k) | Finds the first key that is ≥ (greater than or equal to) k  |
+| upper_bound(k) | Finds the first key that is > (strictly greater than) k     |
+
+Example:
+If your map has keys: [10, 20, 30]
+
+lower_bound(20) → points to 20
+
+upper_bound(20) → points to 30
+
+lower_bound(25) → points to 30
+
+upper_bound(25) → points to 30
+
+lower_bound(35) → points to end() (nothing ≥ 35)
+
+upper_bound(35) → points to end() (nothing > 35)
+
+<!---
 ### map lower_bound
 
 find the first element in the map whose key is either equal to or greater than the given key. If the key passed in the parameter exceeds the maximum key in the container, then the iterator returned points to the number of elements in the map container as key and nothing for the element.
@@ -272,7 +295,7 @@ The upper bound of key 11 is 12 30
 The upper bound of key 13 is 14 40
 The upper bound of key 17 is 4 0
 ```
-
+--->
 # BFS - DFS
 For BFS, make sure marking position visited before entering the queue, that would ensure that we are not enqueuing same position multiple times.
 We will traverse one position only once!
